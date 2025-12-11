@@ -1,6 +1,5 @@
 import cocotb
 from cocotb.triggers import Timer
-from cocotb.regression import TestFactory
 import random
 
 # Simple directed test
