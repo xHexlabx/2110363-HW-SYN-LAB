@@ -8,4 +8,4 @@ module full_adder (
 
 assign {cout , sum} = a + b + cin ;
 
-endmodule
+endmodule ;
