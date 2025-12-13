@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module tb_full_adder;
+module sim_full_adder;
 
     // 1. ประกาศตัวแปร
     // input ของ Module ใช้ reg (เพราะเราต้องกำหนดค่าให้มัน)
@@ -25,7 +25,7 @@ module tb_full_adder;
     initial begin
         // สร้างไฟล์สำหรับดู Waveform (GTKWave)
         $dumpfile("wave.vcd");
-        $dumpvars(0, tb_full_adder);
+        $dumpvars(0, sim_full_adder);
 
         // แสดงผลทางหน้าจอ (Monitor changes)
         $monitor("Time: %0t | a = %b | b = %b | cin = %b | sum = %b | cout = %b", $time, t_a, t_b, t_cin , t_sum, t_cout);

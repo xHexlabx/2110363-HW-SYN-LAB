@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 
-module tb_and_gate;
+module sim_and_gate;
 
     // 1. ประกาศตัวแปร
     // input ของ Module ใช้ reg (เพราะเราต้องกำหนดค่าให้มัน)
@@ -21,7 +21,7 @@ module tb_and_gate;
     initial begin
         // สร้างไฟล์สำหรับดู Waveform (GTKWave)
         $dumpfile("wave.vcd");
-        $dumpvars(0, tb_and_gate);
+        $dumpvars(0, sim_and_gate);
 
         // แสดงผลทางหน้าจอ (Monitor changes)
         $monitor("Time: %0t | a = %b | b = %b | Output c = %b", $time, t_a, t_b, t_c);
