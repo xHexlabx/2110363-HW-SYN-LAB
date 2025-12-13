@@ -1,0 +1,51 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5903e37fc510 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x5903e37fc6a0 .scope module, "full_adder" "full_adder" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "cin";
+    .port_info 3 /OUTPUT 1 "sum";
+    .port_info 4 /OUTPUT 1 "cout";
+L_0x79c25eaa5060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x5903e37fc830_0 .net *"_ivl_10", 0 0, L_0x79c25eaa5060;  1 drivers
+v0x5903e3845670_0 .net *"_ivl_11", 1 0, L_0x5903e3846650;  1 drivers
+v0x5903e3845750_0 .net *"_ivl_13", 1 0, L_0x5903e3846790;  1 drivers
+L_0x79c25eaa50a8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x5903e3845840_0 .net *"_ivl_16", 0 0, L_0x79c25eaa50a8;  1 drivers
+v0x5903e3845920_0 .net *"_ivl_17", 1 0, L_0x5903e38468f0;  1 drivers
+v0x5903e3845a50_0 .net *"_ivl_3", 1 0, L_0x5903e3846380;  1 drivers
+L_0x79c25eaa5018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x5903e3845b30_0 .net *"_ivl_6", 0 0, L_0x79c25eaa5018;  1 drivers
+v0x5903e3845c10_0 .net *"_ivl_7", 1 0, L_0x5903e38464d0;  1 drivers
+o0x79c25eaee198 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5903e3845cf0_0 .net "a", 0 0, o0x79c25eaee198;  0 drivers
+o0x79c25eaee1c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5903e3845e40_0 .net "b", 0 0, o0x79c25eaee1c8;  0 drivers
+o0x79c25eaee1f8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5903e3845f00_0 .net "cin", 0 0, o0x79c25eaee1f8;  0 drivers
+v0x5903e3845fc0_0 .net "cout", 0 0, L_0x5903e38461e0;  1 drivers
+v0x5903e3846080_0 .net "sum", 0 0, L_0x5903e38462b0;  1 drivers
+L_0x5903e38461e0 .part L_0x5903e38468f0, 1, 1;
+L_0x5903e38462b0 .part L_0x5903e38468f0, 0, 1;
+L_0x5903e3846380 .concat [ 1 1 0 0], o0x79c25eaee198, L_0x79c25eaa5018;
+L_0x5903e38464d0 .concat [ 1 1 0 0], o0x79c25eaee1c8, L_0x79c25eaa5060;
+L_0x5903e3846650 .arith/sum 2, L_0x5903e3846380, L_0x5903e38464d0;
+L_0x5903e3846790 .concat [ 1 1 0 0], o0x79c25eaee1f8, L_0x79c25eaa50a8;
+L_0x5903e38468f0 .arith/sum 2, L_0x5903e3846650, L_0x5903e3846790;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/tutorials/examples/example_2/cocotb/full_adder_tb/../../src/full_adder.v";

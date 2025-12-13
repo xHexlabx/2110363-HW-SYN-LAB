@@ -1,7 +1,7 @@
 <testsuites name="results">
   <testsuite name="all" package="all">
-    <property name="random_seed" value="1765336398" />
-    <testcase name="and_gate_basic_test" classname="test_and_gate" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/tutorials/examples/example_1/cocotb/and_gate_tb/test_and_gate.py" lineno="7" time="0.0006289482116699219" sim_time_ns="4.0" ratio_time="6359.824109173616" />
-    <testcase name="and_gate_random_test" classname="test_and_gate" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/tutorials/examples/example_1/cocotb/and_gate_tb/test_and_gate.py" lineno="47" time="0.00046515464782714844" sim_time_ns="20.0" ratio_time="42996.45310097386" />
+    <property name="random_seed" value="1765630080" />
+    <testcase name="and_gate_basic_test" classname="and_gate_tb" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/tutorials/examples/example_1/cocotb/and_gate_tb/and_gate_tb.py" lineno="6" time="0.00048351287841796875" sim_time_ns="4.0" ratio_time="8272.788954635109" />
+    <testcase name="and_gate_random_test" classname="and_gate_tb" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/tutorials/examples/example_1/cocotb/and_gate_tb/and_gate_tb.py" lineno="46" time="0.0003311634063720703" sim_time_ns="20.0" ratio_time="60393.14614830814" />
   </testsuite>
 </testsuites>
