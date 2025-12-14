@@ -86,3 +86,5 @@ Cocotb ช่วยให้เขียน Testbench ด้วยภาษา P
     ```bash
     gtkwave wave.vcd
     ```
+    หรือ:
+    surfer wave.vcd
