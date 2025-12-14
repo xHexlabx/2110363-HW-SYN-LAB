@@ -1,0 +1,70 @@
+$date
+	Sun Dec 14 21:45:20 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module sim_param_half_adder $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " cout $end
+$var parameter 32 # WIDTH $end
+$var reg 4 $ a [3:0] $end
+$var reg 4 % b [3:0] $end
+$scope module uut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 4 ( sum [3:0] $end
+$var wire 1 " cout $end
+$var parameter 32 ) WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 )
+b100 #
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+0"
+b0 !
+$end
+#100
+1"
+b110 !
+b110 (
+b1010 %
+b1010 '
+b1100 $
+b1100 &
+#110
+b0 !
+b0 (
+b1 %
+b1 '
+b1111 $
+b1111 &
+#120
+b1000 !
+b1000 (
+0"
+b101 %
+b101 '
+b11 $
+b11 &
+#130
+b1111 !
+b1111 (
+b110 %
+b110 '
+b1001 $
+b1001 &
+#240

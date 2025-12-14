@@ -1,0 +1,43 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x61d0611c5510 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x61d0611c56a0 .scope module, "param_half_adder" "param_half_adder" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "cout";
+P_0x61d0611c5830 .param/l "WIDTH" 0 3 2, +C4<00000000000000000000000000000001>;
+L_0x7a161b9b7060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x61d0611ec730_0 .net *"_ivl_10", 0 0, L_0x7a161b9b7060;  1 drivers
+v0x61d06120e4e0_0 .net *"_ivl_11", 1 0, L_0x61d06120f140;  1 drivers
+v0x61d06120e5c0_0 .net *"_ivl_3", 1 0, L_0x61d06120ee70;  1 drivers
+L_0x7a161b9b7018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x61d06120e6b0_0 .net *"_ivl_6", 0 0, L_0x7a161b9b7018;  1 drivers
+v0x61d06120e790_0 .net *"_ivl_7", 1 0, L_0x61d06120efc0;  1 drivers
+o0x7a161bcc5108 .functor BUFZ 1, C4<z>; HiZ drive
+v0x61d06120e8c0_0 .net "a", 0 0, o0x7a161bcc5108;  0 drivers
+o0x7a161bcc5138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x61d06120e9a0_0 .net "b", 0 0, o0x7a161bcc5138;  0 drivers
+v0x61d06120ea80_0 .net "cout", 0 0, L_0x61d06120eca0;  1 drivers
+v0x61d06120eb40_0 .net "sum", 0 0, L_0x61d06120eda0;  1 drivers
+L_0x61d06120eca0 .part L_0x61d06120f140, 1, 1;
+L_0x61d06120eda0 .part L_0x61d06120f140, 0, 1;
+L_0x61d06120ee70 .concat [ 1 1 0 0], o0x7a161bcc5108, L_0x7a161b9b7018;
+L_0x61d06120efc0 .concat [ 1 1 0 0], o0x7a161bcc5138, L_0x7a161b9b7060;
+L_0x61d06120f140 .arith/sum 2, L_0x61d06120ee70, L_0x61d06120efc0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/tutorials/examples/example_6/cocotb/param_half_adder_tb/../../src/param_half_adder.v";
