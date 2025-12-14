@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1765714814" />
+    <testcase name="dff_test" classname="dff_tb" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/tutorials/examples/example_5/cocotb/dff_tb/dff_tb.py" lineno="4" time="0.0006568431854248047" sim_time_ns="150.0" ratio_time="228365.00907441016" />
+  </testsuite>
+</testsuites>
