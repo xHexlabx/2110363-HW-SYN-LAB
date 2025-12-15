@@ -1,14 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Create Date: 12/23/2024 05:06:53 AM
-// Design Name: Exercise1
-// Module Name: MultiplexerTB
-// Project Name: Exercise1
-// Target Devices: Basys3
-// Tool Versions: 2023.2
-// Description: Testbench for the Multiplexer module
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module sim_multiplexer ();
   // reg/wire declaration
@@ -46,6 +36,10 @@ module sim_multiplexer ();
 
   // test cases
   initial begin
+    $display("Starting Simulation...");
+    $dumpfile("wave.vcd");
+    // หมายเหตุ: ต้องเปลี่ยนชื่อ module ใน $dumpvars ให้ตรงกับชื่อ module ด้านบน
+    $dumpvars(0, sim_multiplexer);
     for (i = 0; i < 16; i = i + 1) begin
       for (j = 0; j < 16; j = j + 1) begin
         in_0 = i;
