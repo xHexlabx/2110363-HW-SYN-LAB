@@ -1,0 +1,78 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x5a1cf269b4c0 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x5a1cf269b670 .scope module, "controller" "controller" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "rst";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 4 "an";
+    .port_info 3 /OUTPUT 1 "selector";
+v0x5a1cf26acd50_0 .var "an", 3 0;
+o0x71329a9cf048 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5a1cf26ad430_0 .net "clk", 0 0, o0x71329a9cf048;  0 drivers
+v0x5a1cf26e6540_0 .var "counter", 17 0;
+o0x71329a9cf0a8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5a1cf26e6630_0 .net "rst", 0 0, o0x71329a9cf0a8;  0 drivers
+v0x5a1cf26e66f0_0 .var "selector", 0 0;
+E_0x5a1cf26d4c60 .event posedge, v0x5a1cf26ad430_0;
+    .scope S_0x5a1cf269b670;
+T_0 ;
+    %pushi/vec4 0, 0, 18;
+    %store/vec4 v0x5a1cf26e6540_0, 0, 18;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0x5a1cf26acd50_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x5a1cf26e66f0_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x5a1cf269b670;
+T_1 ;
+    %wait E_0x5a1cf26d4c60;
+    %load/vec4 v0x5a1cf26e6630_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 15, 0, 4;
+    %assign/vec4 v0x5a1cf26acd50_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x5a1cf26e66f0_0, 0;
+    %pushi/vec4 0, 0, 18;
+    %assign/vec4 v0x5a1cf26e6540_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v0x5a1cf26e6540_0;
+    %parti/s 1, 17, 6;
+    %pad/u 32;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_1.2, 4;
+    %pushi/vec4 14, 0, 4;
+    %assign/vec4 v0x5a1cf26acd50_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x5a1cf26e66f0_0, 0;
+    %jmp T_1.3;
+T_1.2 ;
+    %pushi/vec4 13, 0, 4;
+    %assign/vec4 v0x5a1cf26acd50_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x5a1cf26e66f0_0, 0;
+T_1.3 ;
+    %load/vec4 v0x5a1cf26e6540_0;
+    %addi 1, 0, 18;
+    %assign/vec4 v0x5a1cf26e6540_0, 0;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs/lab_1/cocotb/controller_tb/../../src/controller.v";

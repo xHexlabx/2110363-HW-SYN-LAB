@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1766261854" />
+    <testcase name="test_press_to_run" classname="controller_tb" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs/lab_1/cocotb/controller_tb/controller_tb.py" lineno="5" time="0.0009837150573730469" sim_time_ns="80.0" ratio_time="81324.36257876878" />
+  </testsuite>
+</testsuites>
