@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1770019589" />
+    <testcase name="dff_sync_reset_test" classname="dff_sync_reset_test" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_1/part2/part2-3/tests/dff_sync_reset_test.py" lineno="10" time="0.0017437934875488281" sim_time_ns="130.0" ratio_time="74550.11211375444" />
+  </testsuite>
+</testsuites>

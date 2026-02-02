@@ -6,6 +6,6 @@ module full_adder_4_bit (
     output wire cout
 );
     // TODO: Implement the 4-bit full adder here
+    assign {cout , sum} = a + b + cin;
 
-    
 endmodule

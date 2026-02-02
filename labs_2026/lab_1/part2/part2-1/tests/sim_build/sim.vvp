@@ -1,0 +1,62 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x57e0e05b0510 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x57e0e05b06a0 .scope module, "xnor_xor" "xnor_xor" 3 1;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "in1";
+    .port_info 1 /INPUT 1 "in2";
+    .port_info 2 /INPUT 1 "in3";
+    .port_info 3 /OUTPUT 1 "out";
+o0x73d1febcf078 .functor BUFZ 1, C4<z>; HiZ drive
+o0x73d1febcf0a8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x57e0e05d83e0 .functor XOR 1, o0x73d1febcf078, o0x73d1febcf0a8, C4<0>, C4<0>;
+L_0x57e0e05fcb70 .functor NOT 1, L_0x57e0e05d83e0, C4<0>, C4<0>, C4<0>;
+o0x73d1febcf0d8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x57e0e05fcc60 .functor XOR 1, L_0x57e0e05fcb70, o0x73d1febcf0d8, C4<0>, C4<0>;
+v0x57e0e05d8140_0 .net *"_ivl_0", 0 0, L_0x57e0e05d83e0;  1 drivers
+v0x57e0e05d84e0_0 .net *"_ivl_2", 0 0, L_0x57e0e05fcb70;  1 drivers
+v0x57e0e05d8580_0 .net "in1", 0 0, o0x73d1febcf078;  0 drivers
+v0x57e0e05fc500_0 .net "in2", 0 0, o0x73d1febcf0a8;  0 drivers
+v0x57e0e05fc5c0_0 .net "in3", 0 0, o0x73d1febcf0d8;  0 drivers
+v0x57e0e05fc6d0_0 .net "out", 0 0, L_0x57e0e05fcc60;  1 drivers
+S_0x57e0e05e9af0 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 4 1;
+ .timescale -9 -12;
+S_0x57e0e05fc810 .scope begin, "$unm_blk_1" "$unm_blk_1" 4 2, 4 2 0, S_0x57e0e05e9af0;
+ .timescale -9 -12;
+v0x57e0e05fca10_0 .var/str "dumpfile_path";
+    .scope S_0x57e0e05e9af0;
+T_0 ;
+    %fork t_1, S_0x57e0e05fc810;
+    %jmp t_0;
+    .scope S_0x57e0e05fc810;
+t_1 ;
+    %vpi_func 4 3 "$value$plusargs" 32, "dumpfile_path=%s", v0x57e0e05fca10_0 {0 0 0};
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_0.0, 4;
+    %vpi_call/w 4 4 "$dumpfile", v0x57e0e05fca10_0 {0 0 0};
+    %jmp T_0.1;
+T_0.0 ;
+    %vpi_call/w 4 6 "$dumpfile", "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_1/part2/part2-1/tests/sim_build/xnor_xor.fst" {0 0 0};
+T_0.1 ;
+    %vpi_call/w 4 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x57e0e05b06a0 {0 0 0};
+    %end;
+    .scope S_0x57e0e05e9af0;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_1/part2/part2-1/xnor_xor.v";
+    "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_1/part2/part2-1/tests/sim_build/cocotb_iverilog_dump.v";

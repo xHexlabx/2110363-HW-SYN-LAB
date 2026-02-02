@@ -5,6 +5,6 @@ module xnor_xor (
     output wire out
 );
     // TODO: Implement the logic here
-
+    assign out = ~(in1 ^ in2) ^ in3;
 
 endmodule

@@ -5,7 +5,10 @@ module rom (
 );
 
     // TODO: Fill template of ROM from language template and adjust parameters/ports as needed.
+    initial begin
+        $display("ROM initialized");
 
+    end
 
 
 endmodule
