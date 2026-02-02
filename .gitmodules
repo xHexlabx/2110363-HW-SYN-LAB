@@ -1,0 +1,3 @@
+[submodule "labs_2026/lab_2"]
+	path = labs_2026/lab_2
+	url = git@github.com:2110363-HW-SYN-LAB/lab2.git
