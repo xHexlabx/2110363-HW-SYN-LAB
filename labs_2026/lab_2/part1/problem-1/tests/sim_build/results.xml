@@ -1,0 +1,7 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768846522" />
+    <testcase name="moore_fsm_test_1" classname="moore_fsm_test" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_2/part1/problem-1/tests/moore_fsm_test.py" lineno="9" time="0.0012922286987304688" sim_time_ns="120.0" ratio_time="92862.81918819188" />
+    <testcase name="moore_fsm_test_2" classname="moore_fsm_test" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_2/part1/problem-1/tests/moore_fsm_test.py" lineno="43" time="0.00047469139099121094" sim_time_ns="100.0" ratio_time="210663.18432948267" />
+  </testsuite>
+</testsuites>

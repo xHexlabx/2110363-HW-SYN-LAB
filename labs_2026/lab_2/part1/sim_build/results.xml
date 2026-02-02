@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1768861241" />
+    <testcase name="debouncer_5_test" classname="debouncer_samp_5_test" file="/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_2/part1/problem-3/tests/debouncer_samp_5_test.py" lineno="10" time="0.004029035568237305" sim_time_ns="225.0" ratio_time="55844.62985975501" />
+  </testsuite>
+</testsuites>
