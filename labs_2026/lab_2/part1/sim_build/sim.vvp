@@ -8,85 +8,85 @@
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
-S_0x5a247f63b490 .scope package, "$unit" "$unit" 2 1;
+S_0x5719be9f2490 .scope package, "$unit" "$unit" 2 1;
  .timescale -9 -12;
-S_0x5a247f63b620 .scope module, "debouncer" "debouncer" 3 1;
+S_0x5719be9f2620 .scope module, "debouncer" "debouncer" 3 1;
  .timescale -9 -12;
     .port_info 0 /INPUT 1 "clk";
     .port_info 1 /INPUT 1 "rst";
     .port_info 2 /INPUT 1 "data_in";
     .port_info 3 /OUTPUT 1 "data_out";
-P_0x5a247f660d00 .param/l "COUNTER_WIDTH" 0 3 3, +C4<00000000000000000000000000000011>;
-P_0x5a247f660d40 .param/l "SAMPLING_RATE" 0 3 2, +C4<00000000000000000000000000000101>;
-o0x7ede27eb7018 .functor BUFZ 1, C4<z>; HiZ drive
-v0x5a247f677940_0 .net "clk", 0 0, o0x7ede27eb7018;  0 drivers
-v0x5a247f68aa80_0 .var "counter", 2 0;
-o0x7ede27eb7078 .functor BUFZ 1, C4<z>; HiZ drive
-v0x5a247f68ab60_0 .net "data_in", 0 0, o0x7ede27eb7078;  0 drivers
-v0x5a247f68ac30_0 .var "data_out", 0 0;
-o0x7ede27eb70d8 .functor BUFZ 1, C4<z>; HiZ drive
-v0x5a247f68acf0_0 .net "rst", 0 0, o0x7ede27eb70d8;  0 drivers
-E_0x5a247f674970 .event posedge, v0x5a247f677940_0;
-S_0x5a247f677790 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 4 1;
+P_0x5719bea17d00 .param/l "COUNTER_WIDTH" 0 3 3, +C4<00000000000000000000000000000011>;
+P_0x5719bea17d40 .param/l "SAMPLING_RATE" 0 3 2, +C4<00000000000000000000000000000101>;
+o0x7273a0dcf018 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5719bea2e940_0 .net "clk", 0 0, o0x7273a0dcf018;  0 drivers
+v0x5719bea41a80_0 .var "counter", 2 0;
+o0x7273a0dcf078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5719bea41b60_0 .net "data_in", 0 0, o0x7273a0dcf078;  0 drivers
+v0x5719bea41c30_0 .var "data_out", 0 0;
+o0x7273a0dcf0d8 .functor BUFZ 1, C4<z>; HiZ drive
+v0x5719bea41cf0_0 .net "rst", 0 0, o0x7273a0dcf0d8;  0 drivers
+E_0x5719bea2b970 .event posedge, v0x5719bea2e940_0;
+S_0x5719bea2e790 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 4 1;
  .timescale -9 -12;
-S_0x5a247f68ae80 .scope begin, "$unm_blk_8" "$unm_blk_8" 4 2, 4 2 0, S_0x5a247f677790;
+S_0x5719bea41e80 .scope begin, "$unm_blk_8" "$unm_blk_8" 4 2, 4 2 0, S_0x5719bea2e790;
  .timescale -9 -12;
-v0x5a247f68b080_0 .var/str "dumpfile_path";
-    .scope S_0x5a247f63b620;
+v0x5719bea42080_0 .var/str "dumpfile_path";
+    .scope S_0x5719be9f2620;
 T_0 ;
-    %wait E_0x5a247f674970;
-    %load/vec4 v0x5a247f68acf0_0;
+    %wait E_0x5719bea2b970;
+    %load/vec4 v0x5719bea41cf0_0;
     %flag_set/vec4 8;
     %jmp/0xz  T_0.0, 8;
     %pushi/vec4 0, 0, 3;
-    %assign/vec4 v0x5a247f68aa80_0, 0;
+    %assign/vec4 v0x5719bea41a80_0, 0;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0x5a247f68ac30_0, 0;
+    %assign/vec4 v0x5719bea41c30_0, 0;
     %jmp T_0.1;
 T_0.0 ;
-    %load/vec4 v0x5a247f68aa80_0;
+    %load/vec4 v0x5719bea41a80_0;
     %pad/u 32;
     %cmpi/e 4, 0, 32;
     %jmp/0xz  T_0.2, 4;
-    %load/vec4 v0x5a247f68ab60_0;
+    %load/vec4 v0x5719bea41b60_0;
     %pad/u 32;
     %cmpi/e 1, 0, 32;
     %jmp/0xz  T_0.4, 4;
     %pushi/vec4 1, 0, 1;
-    %assign/vec4 v0x5a247f68ac30_0, 0;
+    %assign/vec4 v0x5719bea41c30_0, 0;
     %jmp T_0.5;
 T_0.4 ;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v0x5a247f68ac30_0, 0;
+    %assign/vec4 v0x5719bea41c30_0, 0;
 T_0.5 ;
     %pushi/vec4 0, 0, 3;
-    %assign/vec4 v0x5a247f68aa80_0, 0;
+    %assign/vec4 v0x5719bea41a80_0, 0;
     %jmp T_0.3;
 T_0.2 ;
-    %load/vec4 v0x5a247f68aa80_0;
+    %load/vec4 v0x5719bea41a80_0;
     %addi 1, 0, 3;
-    %assign/vec4 v0x5a247f68aa80_0, 0;
+    %assign/vec4 v0x5719bea41a80_0, 0;
 T_0.3 ;
 T_0.1 ;
     %jmp T_0;
     .thread T_0;
-    .scope S_0x5a247f677790;
+    .scope S_0x5719bea2e790;
 T_1 ;
-    %fork t_1, S_0x5a247f68ae80;
+    %fork t_1, S_0x5719bea41e80;
     %jmp t_0;
-    .scope S_0x5a247f68ae80;
+    .scope S_0x5719bea41e80;
 t_1 ;
-    %vpi_func 4 3 "$value$plusargs" 32, "dumpfile_path=%s", v0x5a247f68b080_0 {0 0 0};
+    %vpi_func 4 3 "$value$plusargs" 32, "dumpfile_path=%s", v0x5719bea42080_0 {0 0 0};
     %cmpi/ne 0, 0, 32;
     %jmp/0xz  T_1.0, 4;
-    %vpi_call/w 4 4 "$dumpfile", v0x5a247f68b080_0 {0 0 0};
+    %vpi_call/w 4 4 "$dumpfile", v0x5719bea42080_0 {0 0 0};
     %jmp T_1.1;
 T_1.0 ;
     %vpi_call/w 4 6 "$dumpfile", "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_2/part1/sim_build/debouncer.fst" {0 0 0};
 T_1.1 ;
-    %vpi_call/w 4 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5a247f63b620 {0 0 0};
+    %vpi_call/w 4 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5719be9f2620 {0 0 0};
     %end;
-    .scope S_0x5a247f677790;
+    .scope S_0x5719bea2e790;
 t_0 %join;
     %end;
     .thread T_1;
