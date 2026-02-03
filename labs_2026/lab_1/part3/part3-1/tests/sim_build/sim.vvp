@@ -1,0 +1,77 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x55f5586df490 .scope package, "$unit" "$unit" 2 1;
+ .timescale -9 -12;
+S_0x55f5586df640 .scope module, "fulladder_2bit" "fulladder_2bit" 3 3;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 2 "A";
+    .port_info 1 /INPUT 2 "B";
+    .port_info 2 /INPUT 1 "Cin";
+    .port_info 3 /OUTPUT 2 "Sum";
+    .port_info 4 /OUTPUT 1 "Cout";
+o0x7e54a9f6d018 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x55f558708a30_0 .net "A", 1 0, o0x7e54a9f6d018;  0 drivers
+o0x7e54a9f6d048 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x55f558708e20_0 .net "B", 1 0, o0x7e54a9f6d048;  0 drivers
+o0x7e54a9f6d078 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55f558708ec0_0 .net "Cin", 0 0, o0x7e54a9f6d078;  0 drivers
+v0x55f55872d950_0 .net "Cout", 0 0, L_0x55f55872e570;  1 drivers
+v0x55f55872da10_0 .net "Sum", 1 0, L_0x55f55872e640;  1 drivers
+L_0x7e54a9f24060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55f55872db40_0 .net *"_ivl_10", 0 0, L_0x7e54a9f24060;  1 drivers
+v0x55f55872dc20_0 .net *"_ivl_11", 2 0, L_0x55f55872ea30;  1 drivers
+v0x55f55872dd00_0 .net *"_ivl_13", 2 0, L_0x55f55872eb70;  1 drivers
+L_0x7e54a9f240a8 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x55f55872dde0_0 .net *"_ivl_16", 1 0, L_0x7e54a9f240a8;  1 drivers
+v0x55f55872dec0_0 .net *"_ivl_17", 2 0, L_0x55f55872ecd0;  1 drivers
+v0x55f55872dfa0_0 .net *"_ivl_3", 2 0, L_0x55f55872e760;  1 drivers
+L_0x7e54a9f24018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x55f55872e080_0 .net *"_ivl_6", 0 0, L_0x7e54a9f24018;  1 drivers
+v0x55f55872e160_0 .net *"_ivl_7", 2 0, L_0x55f55872e8b0;  1 drivers
+L_0x55f55872e570 .part L_0x55f55872ecd0, 2, 1;
+L_0x55f55872e640 .part L_0x55f55872ecd0, 0, 2;
+L_0x55f55872e760 .concat [ 2 1 0 0], o0x7e54a9f6d018, L_0x7e54a9f24018;
+L_0x55f55872e8b0 .concat [ 2 1 0 0], o0x7e54a9f6d048, L_0x7e54a9f24060;
+L_0x55f55872ea30 .arith/sum 3, L_0x55f55872e760, L_0x55f55872e8b0;
+L_0x55f55872eb70 .concat [ 1 2 0 0], o0x7e54a9f6d078, L_0x7e54a9f240a8;
+L_0x55f55872ecd0 .arith/sum 3, L_0x55f55872ea30, L_0x55f55872eb70;
+S_0x55f5587194e0 .scope module, "cocotb_iverilog_dump" "cocotb_iverilog_dump" 4 1;
+ .timescale -9 -12;
+S_0x55f55872e2e0 .scope begin, "$unm_blk_1" "$unm_blk_1" 4 2, 4 2 0, S_0x55f5587194e0;
+ .timescale -9 -12;
+v0x55f55872e490_0 .var/str "dumpfile_path";
+    .scope S_0x55f5587194e0;
+T_0 ;
+    %fork t_1, S_0x55f55872e2e0;
+    %jmp t_0;
+    .scope S_0x55f55872e2e0;
+t_1 ;
+    %vpi_func 4 3 "$value$plusargs" 32, "dumpfile_path=%s", v0x55f55872e490_0 {0 0 0};
+    %cmpi/ne 0, 0, 32;
+    %jmp/0xz  T_0.0, 4;
+    %vpi_call/w 4 4 "$dumpfile", v0x55f55872e490_0 {0 0 0};
+    %jmp T_0.1;
+T_0.0 ;
+    %vpi_call/w 4 6 "$dumpfile", "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_1/part3/part3-1/tests/sim_build/fulladder_2bit.fst" {0 0 0};
+T_0.1 ;
+    %vpi_call/w 4 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55f5586df640 {0 0 0};
+    %end;
+    .scope S_0x55f5587194e0;
+t_0 %join;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_1/part3/part3-1/fulladder_2bit.v";
+    "/home/hextex/Documents/GitHub/Chula_Coursework/Year_2/Sem_2/2110363-HW-SYN-LAB/labs_2026/lab_1/part3/part3-1/tests/sim_build/cocotb_iverilog_dump.v";
